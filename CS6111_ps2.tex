@@ -1,0 +1,83 @@
+\documentclass[11pt]{exam}
+\printanswers
+\usepackage{amsmath,amssymb,complexity}
+\usepackage{datetime,enumerate,palatino}
+\usepackage{setspace}
+
+\newcommand{\N}{{\mathbb{N}}}
+\newcommand{\bool}{\{0,1\}}
+\newcommand{\owf}{\mathsf{OWF}}
+\newcommand\myeq{\mathrel{\overset{\makebox[0pt]{\mbox{\normalfont\tiny\sffamily def}}}{=}}}
+\begin{document}
+\setstretch{1.1}
+
+\hrule
+\vspace{3mm}
+\noindent
+{\sf IITM-CS6111 : Foundations of Cryptography  \hfill Assignment \#2 }
+\vspace{3mm} \\
+\noindent
+{\sf Topic: One-way functions \hfill Due on : $14^{th}$ Dec, 2020}
+\vspace{3mm}
+\hrule
+
+{\small 
+\begin{itemize}
+\itemsep 0pt
+\item All answers must be written in mathematically rigorous form.
+\item Use LaTeX to generate the pdf file of your solution. \textbf{NO} photographs/scanned copies of hand written solutions are accepted. 
+\item Students are allowed to form groups (maximum of $3$ members) for this assignment. However, referring to internet etc is strictly disallowed.
+\item Submit solutions at moodle link before the deadline one per team. Clearly mention the names and roll numbers of all the teammates involved.
+\end{itemize}
+}
+% uncomment the lines below and fill name and roll number of teammates here
+
+%\hrule
+%\vspace{3mm}
+%\noindent
+%{\sf Roll No: \hfill Full Name: } 
+%\vspace{3mm}\\
+%\noindent
+%{\sf Roll No: \hfill Full Name: } 
+%\vspace{3mm}\\
+%\noindent
+%{\sf Roll No: \hfill Full Name: } 
+%\vspace{3mm}
+
+\hrule
+
+\begin{questions}
+
+\question[10] 
+Prove that there is no one-way function $f\colon\bool^n\to \bool^{\lfloor \log n \rfloor}$.
+%\begin{solution}
+%    Uncomment the lines above and below and write your solution here
+%\end{solution}
+\question[10]
+
+Prove or disprove: If $f:\bool^n\to\bool^n$ is a one-way function, then the function $g:\bool^n\to\bool^{n-\lfloor \log n \rfloor}$ which outputs the $n-\lfloor \log n \rfloor$ higher order bits of $f$ is also a one-way function. (i.e $\forall x \in \bool^n$, if $f(x)=b_1b_2\cdots b_n$ then $g(x)=b_1b_2\cdots b_{n-\lfloor \log n \rfloor}$)
+%\begin{solution}
+%    Uncomment the lines above and below and write your solution here
+%\end{solution}
+
+\question[10]({\bf Expanding $\owf$s}) Prove that if $f$ is a one-way function, then the function $g$ defined by $g(x_1,x_2)\myeq\left(f(x_1),x_2\right)$ where $|x_1|=|x_2|$, is also a one-way function. Observe that $g$ reveals half of its input, but is nevertheless one-way.
+%\begin{solution}
+%    Uncomment the lines above and below and write your solution here
+%\end{solution}
+
+\question[10]({\bf Composition of $\owf$s}) Let $f$ be a one-way function. Is $g(x)\myeq f(f(x))$ necessarily a one-way function? What about $g'(x)\myeq f(x)||f(f(x))$? Prove your answers.
+%\begin{solution}
+%    Uncomment the lines above and below and write your solution here
+%\end{solution}
+
+\question[10]({\bf Length preserving $\owf$}) Prove that if there exists a one way function, then there exists a length preserving one-way function.
+
+\emph{Hint: Let $f$ be a one-way function and and let $p(.)$ be a polynomial such that $|f(x)|\leq p(|x|)$. (Justify the existence of $p$.) Define $f'(x)\myeq f(x)||10^{p(|x|)-|f(x)|}$. Further modify $f'$ to get a length-preserving function that remains one-way.}
+%\begin{solution}
+%    Uncomment the lines above and below and write your solution here
+%\end{solution}
+
+\end{questions}
+\end{document}
+
+

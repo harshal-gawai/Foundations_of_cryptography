@@ -1,0 +1,87 @@
+\documentclass[11pt]{exam}
+\printanswers
+\usepackage{amsmath,amssymb,complexity}
+\usepackage{datetime,enumerate,palatino}
+\usepackage{setspace}
+
+\newcommand{\F}{{\mathbb{F}}}
+\newcommand{\Z}{{\mathbb{Z}}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Q}{\mathbb{Q}}
+
+\begin{document}
+\setstretch{1.1}
+
+\hrule
+\vspace{3mm}
+\noindent
+{\sf IITM-CS6111 : Foundations of Cryptography  \hfill Assignment \#3 }
+\vspace{3mm} \\
+\noindent
+{\sf Topic: OFWs and PRGs\hfill Due on : $21^{st}$ Dec, 2020}
+\vspace{3mm}
+\hrule
+
+{\small 
+\begin{itemize}
+\itemsep 0pt
+\item All answers must be written in mathematically rigorous form.
+\item It is recommended to use LaTeX to generate the pdf file of your solution. However, scanned copies of hand written solutions are also accepted. In the latter case, it's the duty of the individual to make his/her solutions clearly visible and un-ambiguous.
+\item Students are allowed to form groups (maximum of $3$ members) for this assignment. However, referring to internet etc is strictly disallowed.
+\item Submit solutions at moodle link before the deadline one per team. Clearly mention the names and roll numbers of all the teammates involved.
+\end{itemize}
+}
+% uncomment the lines below and fill name and roll number of teammates here
+
+%\hrule
+%\vspace{3mm}
+%\noindent
+%{\sf Roll No: \hfill Full Name: } 
+%\vspace{3mm}\\
+%\noindent
+%{\sf Roll No: \hfill Full Name: } 
+%\vspace{3mm}\\
+%\noindent
+%{\sf Roll No: \hfill Full Name: } 
+%\vspace{3mm}
+\hrule
+
+\begin{questions}
+\question[10]  
+Let $f$ be a one-way function. Let $B(x)$ be the inner product modulo $2$ of first $\lfloor \frac{|x|}{2} \rfloor$ bits with last $\lfloor \frac{|x|}{2} \rfloor$ bits. Thus, $B:\{0,1\}^* \to \{0,1\}$. $B(x_1x_2...x_k||y_1y_2...y_k)=(\Sigma_{i=1}^k x_i \times y_i) \mod 2$. Is $B$ a hard-core predicate for $f$?
+%\begin{solution}
+%    Uncomment the lines above and below and write your solution here
+%\end{solution}
+
+\question[10] 
+Assuming the existence of one-way functions, prove that there exists a one-way function $f$ such that \textit{no} single bit of the pre-image constitutes a hard-core predicate. 
+%\begin{solution}
+%    Uncomment the lines above and below and write your solution here
+%\end{solution}
+
+\question[10] 
+Let $G$ be a pseudorandom generator and let $h$ be a polynomial-time-computable permutation (over strings of the same length). Prove that $G'$ and $G''$ defined by $G'(s)=h(G(s))$ and $G''(s)=h(G(s))$ are both pseduorandom generators. 
+%\begin{solution}
+%    Uncomment the lines above and below and write your solution here
+%\end{solution}
+
+\question[10]  
+Suppose that $G$ is a pseudorandom generator and consider the following modifications to it:
+\begin{enumerate}
+    \item $G'(s)=0^{|G(s)|}$ if the number of $1$'s in $s$ is exactly $\frac{|s|}{2}$ and $G'(s)=G(s)$ otherwise.
+    \item $G''(s)=0^{|G(s)|}$ if the number of $1$'s in $s$ is exactly $\frac{|s|}{3}$ and $G''(s)=G(S)$ otherwise. 
+\end{enumerate}
+%\begin{solution}
+%    Uncomment the lines above and below and write your solution here
+%\end{solution}
+
+\question[10]  
+Refute the following conjecture: For every pseduorandom generator $G$ the function $G'(s)=G(s) \oplus s0^{|G(s)|-|s|}$ is also a pseudorandom generator. 
+%\begin{solution}
+%    Uncomment the lines above and below and write your solution here
+%\end{solution}
+
+\end{questions}
+\end{document}
+
+

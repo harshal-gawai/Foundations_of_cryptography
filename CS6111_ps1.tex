@@ -1,0 +1,87 @@
+\documentclass[11pt]{exam}
+\printanswers
+\usepackage{amsmath,amssymb,complexity}
+\usepackage{datetime,enumerate,palatino}
+\usepackage{setspace}
+
+\newcommand{\F}{{\mathbb{F}}}
+\newcommand{\Z}{{\mathbb{Z}}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Q}{\mathbb{Q}}
+
+\begin{document}
+\setstretch{1.1}
+
+\hrule
+\vspace{3mm}
+\noindent
+{\sf IITM-CS6111 : Foundations of Cryptography  \hfill Assignment \#1 }
+\vspace{3mm} \\
+\noindent
+{\sf Topic: Perfect Encryption \hfill Due on : $14^{th}$ Dec, 2020}
+\vspace{3mm}
+\hrule
+
+{\small 
+\begin{itemize}
+\itemsep 0pt
+\item All answers must be written in mathematically rigorous form.
+\item Use LaTeX to generate the pdf file of your solution. \textbf{NO} photographs/scanned copies of hand written solutions are accepted. 
+\item Students are allowed to form groups (maximum of $3$ members) for this assignment. However, referring to internet etc is strictly disallowed.
+\item Submit solutions at moodle link before the deadline one per team. Clearly mention the names and roll numbers of all the teammates involved.
+\end{itemize}
+}
+% uncomment the lines below and fill name and roll number of teammates here
+
+%\hrule
+%\vspace{3mm}
+%\noindent
+%{\sf Roll No: \hfill Full Name: } 
+%\vspace{3mm}\\
+%\noindent
+%{\sf Roll No: \hfill Full Name: } 
+%\vspace{3mm}\\
+%\noindent
+%{\sf Roll No: \hfill Full Name: } 
+%\vspace{3mm}
+\hrule
+
+\begin{questions}
+\question[10] ({\bf \textit{Perfect secrecy}}) 
+Suppose a Cryptosystem achieves perfect secrecy for a particular plaintext probability distribution. Prove that perfect secrecy is maintained for any plaintext probability distributions.
+%\begin{solution}
+%    Uncomment the lines above and below and write your solution here
+%\end{solution}
+
+\question[10] ({\bf \textit{Affine cipher}}) 
+The \textbf{affine cipher} is a type of monoalphabetic substitution cipher, where each letter in an alphabet is mapped to its numeric equivalent, encrypted using a simple mathematical function, and converted back to a letter.
+\begin{parts}
+\part \textbf{i)} Prove that Affine cipher achieves perfect secrecy iff keys are used with equal probability 1/312.
+\part \textbf{ii)} Compute H(k $\mid$ c) and H(k $\mid$ p,c) for Affine cipher (assume keys are equiprobable and plaintext are equiprobable).
+\end{parts}
+%\begin{solution}
+%    Uncomment the lines above and below and write your solution here
+%\end{solution}
+
+\question[10] ({\bf \textit{Shannon's Theorem}}) 
+Prove that by redefining the key space, the key-generation algorithm \textbf{\textit{Gen}} chooses a key uniformly at random from the key space, without changing \textbf{Pr[C=c $\mid$ M=m]} for any m, c.
+%\begin{solution}
+%    Uncomment the lines above and below and write your solution here
+%\end{solution}
+
+\question[10] ({\bf \textit{Shannon's Theorem}}) 
+Prove that by redefining the key space, \textbf{\textit{Enc}} is deterministic without changing \textbf{Pr[C=c $\mid$ M=m]} for any m, c. 
+%\begin{solution}
+%    Uncomment the lines above and below and write your solution here
+%\end{solution}
+
+\question[10] ({\bf \textit{Shannon's Theorem}}) 
+Prove or refute: An encryption scheme with message space \textbf{M} is perfectly secret iff for every probability distribution over \textbf{M} and every $c_0, c_1 \in C$  we have \textbf{ Pr[C= \boldmath $c_0$] = Pr[C= $c_1$]}. 
+%\begin{solution}
+%    Uncomment the lines above and below and write your solution here
+%\end{solution}
+
+\end{questions}
+\end{document}
+
+
